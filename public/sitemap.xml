@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/contact/contact-us/</loc>
+    <lastmod>2020-04-14T17:09:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/contact/</loc>
+    <lastmod>2020-04-14T17:09:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-04-14T17:09:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/about/about-us/</loc>
+    <lastmod>2020-04-14T16:10:35-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/about/</loc>
+    <lastmod>2020-04-14T16:10:35-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/services/business_visa/</loc>
+    <lastmod>2020-04-13T20:46:23-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/services/</loc>
+    <lastmod>2020-04-13T19:49:23-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/services/express_entry/</loc>
+    <lastmod>2020-04-12T15:33:12-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/services/visitor_visa/</loc>
+    <lastmod>2020-04-12T15:32:52-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/services/work_permit/</loc>
+    <lastmod>2020-04-12T15:30:43-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>

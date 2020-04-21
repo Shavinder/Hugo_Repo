@@ -1,0 +1,44 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Upshore Immigration Services"
+theme = "zafta"
+MetaDataFormat = "toml"
+Paginate = 5
+
+[menu]
+	[[menu.main]]
+		identifier = "home"
+		name = "Home"
+		url = "/"
+		weight = 100
+
+	[[menu.main]]
+		identifier = "services"
+		name = "Services"
+		url = "/services/"
+		weight = 110
+
+	[[menu.main]]
+		identifier = "about"
+		name = "About"
+		url = "/about/about-us"
+		weight = 120
+
+	[[menu.main]]
+		identifier = "posts"
+		name = "Blog"
+		url = "/posts/"
+		weight = 130
+
+	[[menu.main]]
+		identifier = "contact"
+		name = "Contact"
+		url = "/contact/contact-us"
+		weight = 140
+
+[params]
+	brand = "Upshore Immigration"
+	headline = "Choose the Right Immigration Consultant!"
+	description = "We are a Regulated Canadian Immigration Consultancy."
+	description2 = "Authorised. Competent. Trustworthy."
+	author = "Shavinder Dandiwal"

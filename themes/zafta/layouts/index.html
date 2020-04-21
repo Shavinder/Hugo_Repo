@@ -1,0 +1,125 @@
+{{ define "main" }}
+<div class="jumbotron py-5">
+    <div class="container py-4">
+        <h1 class="display-4">{{ .Site.Params.Headline}}</h1>
+        <p class="lead">{{ .Site.Params.Description }}</p>
+        <p>{{.Site.Params.Description2}}</p>
+        {{with .Site.GetPage "contact"}}
+            <a href="{{.Permalink}}" class="btn btn-primary">Contact Us Now</a>
+        {{end}}
+        {{ .Content }}
+    </div>
+</div>
+<section style="min-height: 100vh;  padding-top: 60px; padding-bottom:60px;" class="bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5">Services</h2>
+        <div class="row">
+            {{range (where .Pages "Type" "services")}}
+            {{range .Pages}}
+            {{if eq .Params.Featured true}}
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm" style="">
+                    {{if .Params.List_pic}}
+                    {{$pic:= .Resources.GetMatch .Params.List_pic}}
+                    <img src="{{$pic.RelPermalink}}" class="card-img-top" alt="...">
+                    {{end}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{.Title}}</h5>
+                        <p class="card-text">{{.Description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{.Permalink}}" class="card-link">More <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+            {{end}}
+            {{ end }}
+        </div>
+        <div class="row">
+            <div class="col">
+                {{with .Site.GetPage "services"}}
+                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">All Services...</a>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light" style="min-height:100vh; padding-top: 60px; padding-bottom:60px; ">
+    <div class="container">
+        <h2 class="text-center mb-5">Why us</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border shadow bg-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Authorised</h5>
+                        <p class="card-text" style="line-height: 2em;">Upshore Immigration Services is authorised by ICCRC, the Immigration Consultants of Canada Regulatory Council.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow bg-white mb-3 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Transparent</h5>
+                        <p class="card-text" style="line-height: 2em;">All the stages of the application process shall be explained clearly in simple terms so that you always know what to expect.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow bg-white mb-3 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">We</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">maintain confidentiality,</li>
+                            <li class="list-group-item">quality of service,</li>
+                            <li class="list-group-item">work within the law, and</li>
+                            <li class="list-group-item">are affordable.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-transparent" style="min-height:100vh; padding-top: 60px; padding-bottom:60px; ">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {{ $recentposts := 5 }}
+                {{ if .Params.recentposts }}
+                {{ $recentposts = .Params.recentposts }}
+                {{ end }}
+
+                <h2 class="text-center">Recent posts</h2>
+
+                {{ range first $recentposts (where .Pages "Type" "posts" ) }}
+                {{range .Pages}}
+                <h2 class="mt-5"> <a class="text-body" href="{{ .RelPermalink}}"> {{ .Title | markdownify}} </a> </h2>
+                {{ if .Params.Subtitle }}
+                <h3 class="font-weight-light font-italic mb-3">
+                    {{ .Params.Subtitle | markdownify }}
+                </h3>
+                {{ end }}
+
+                <p class="text-muted mt-3">
+                    <a class="text-muted" href="{{ .Permalink }}">Published {{ .Date.Format "January 2, 2006"  }}</a>
+
+                    {{ range .Params.tags }}
+                    <a class="text-muted" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+                    {{ end }}
+                </p>
+
+                <article class="article">
+                    <p>{{ .Summary }}</p>
+                </article>
+
+                <p class="text-muted">Reading time: about {{ .ReadingTime }} minutes</p>
+                <p><a class="btn btn-primary" href="{{ .URL | relURL }}">Read more...</a></p>
+                {{end}}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

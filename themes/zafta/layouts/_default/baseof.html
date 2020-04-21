@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+{{ block "extra_css" . }}{{ end }}
+<body>
+    {{ partial "nav_main.html" . }}
+
+    
+    {{- block "main" . }}{{- end }}
+    
+    {{- partial "footer.html" . -}}
+
+    {{ partial "global_js.html" . }}
+
+    {{ block "extra_js" . }}{{ end }}
+
+</body>
+</html>
