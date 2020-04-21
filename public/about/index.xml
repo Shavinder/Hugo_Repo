@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Upshore Immigration Services</title>
+    <link>http://example.org/about/</link>
+    <description>Recent content in Abouts on Upshore Immigration Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Apr 2020 16:10:35 -0700</lastBuildDate>
+    
+	<atom:link href="http://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Us</title>
+      <link>http://example.org/about/about-us/</link>
+      <pubDate>Tue, 14 Apr 2020 16:10:35 -0700</pubDate>
+      
+      <guid>http://example.org/about/about-us/</guid>
+      <description>Welcome to Upshore Immigration Services  Our work Upshore Immigration Services is an approved Canadian Immigration Consultant company. We provide services to those who wish to immigrate, work, study or visit Canada. We welcome clients from all across the spectrum, including but not limited to:
+ Individuals seeking to immigrate to Canada as Skilled workers Individuals seeking to immigrate with previous Canadian work experience Families seeking to join together through sponsorship Skilled workers and trades-persons who wish to work in Canada.</description>
+    </item>
+    
+  </channel>
+</rss>
