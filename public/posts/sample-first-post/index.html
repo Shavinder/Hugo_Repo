@@ -44,11 +44,11 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link " href="/posts/">Blog</a>
+                        <a class="nav-link  active" href="/posts/">Blog</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link  active" href="/contact/contact-us">Contact</a>
+                        <a class="nav-link " href="/contact/contact-us">Contact</a>
                     </li>
                     
                 </ul>
@@ -71,45 +71,67 @@
         <li class="breadcrumb-item small"><a href="/">Home</a></li>
     
 
-        <li class="breadcrumb-item small"><a href="/contact/">Contacts</a></li>
+        <li class="breadcrumb-item small"><a href="/posts/">Posts</a></li>
     
 
-                <li class="breadcrumb-item small active" aria-current="page">Contact</li>
+                <li class="breadcrumb-item small active" aria-current="page">Sample First Post</li>
             </ol>
         </div>
     </nav>
 
 
 
-<div class="container py-4">
-    <h1>Contact</h1>
-    <div class="row pb-5">
-        <div class="col-md-6">
-            <p>We offer free <em>initial</em> consultation.</p>
+<div class="container py-4" style="min-height: 60vh;">
+    
+    <h1 class="" style="">Sample First Post</h1>
+    
+    
+
+    <p class="text-muted mt-3">
+        <small>
+            <span class="text-muted">Published: April 19, 2020</span>
+            
+            <span class="text-muted">, Updated: April 19, 2020</span>
+            
+            
+            <a class="badge badge-light" href="/tags/tag1">#tag1</a>
+            
+            <a class="badge badge-light" href="/tags/tag2">#tag2</a>
+            
+        </small>
+    </p>
+
+    <article class="article mt-5">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et mi mauris. Sed placerat accumsan augue, at ullamcorper orci. Proin tempor vestibulum dignissim. Praesent at tellus dictum, porttitor eros sed, maximus sem. Maecenas maximus, enim in vulputate mollis, tellus arcu tempus libero, ut dictum tortor tellus ut lacus. In egestas rutrum ultricies. Donec porta, quam eu accumsan viverra, lectus odio aliquam quam, in faucibus justo orci a eros. Proin ut odio nec velit bibendum venenatis ac sed urna. Donec suscipit in tellus in elementum. Pellentesque quis tincidunt turpis. Mauris consequat ipsum at ligula suscipit varius et ut nunc. Ut vitae mauris ullamcorper, elementum velit in, tempor nisl. Donec sagittis quam lectus, sed vestibulum ante rutrum sed. Sed vitae tincidunt nisi. Vestibulum gravida ex sodales facilisis tempus. Donec in est placerat, interdum metus at, convallis est.</p>
+<p>In lacinia eros id felis porta maximus. Cras non mollis diam, et volutpat dolor. Cras dictum quam magna, nec auctor elit luctus semper. Nulla placerat, ipsum eget vestibulum semper, orci diam gravida nunc, ut vehicula nibh nisi eu enim. Suspendisse eget arcu nunc. Cras arcu leo, aliquet ut augue quis, blandit convallis sem. Phasellus eu dolor vel tortor lobortis cursus et quis sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sed facilisis quam. Curabitur pretium aliquam sagittis. Nullam a leo non urna auctor bibendum. Aenean consequat lacinia elit, id mollis urna condimentum ac. Vivamus a tortor lectus.</p>
+<p>Cras eu ultricies velit. Nulla placerat nulla vel sapien dapibus, a mollis sem tempus. Mauris laoreet tincidunt leo quis luctus. Curabitur non arcu vel felis tempor cursus ac sit amet sapien. Etiam dapibus lacinia felis eu ultrices. Nulla hendrerit, mauris sed vehicula semper, neque lectus malesuada est, quis tempus lacus purus tempor augue. Etiam lobortis neque sit amet elementum dictum. Ut lacinia dui a justo commodo, eu faucibus sem mattis. Curabitur sollicitudin mi et arcu tempus, sed fermentum erat viverra.</p>
+
+    </article>
+</div>
 
 
-            <form action="/contact-us/" method="POST">
-                <div class="form-group">
-                    <label for="id_name">Name</label> <input type="text" name="name" maxlength="255" class="form-control form-control-sm" required="" id="id_name">
-                </div>
+<div class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center">Read next</h2>
 
-                <div class="form-group">
-                    <label for="id_email">Email</label> <input type="email" name="email" class="form-control form-control-sm" required="" id="id_email">
-                </div>
-
-                <div class="form-group">
-                    <label for="id_phone">Phone</label> <input type="text" name="phone" maxlength="255" class="form-control form-control-sm" required="" id="id_phone">
-                </div>
-
-                <div class="form-group">
-                    <label for="id_message">Message</label> <textarea name="message" cols="40" rows="10" class="form-control form-control-sm" required="" id="id_message"></textarea>
-                </div>
-
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </form>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                
+            </div>
+            <div class="col-md-6 text-center">
+                
+                Next Post:
+                <a href="http://example.org/posts/sample-second-post/">Sample Second Post</a>
+                
+            </div>
         </div>
     </div>
 </div>
+
+
+
+
+
 <footer class="footer bg-dark py-3">
     <div class="container">
         <div class="row">
@@ -150,16 +172,16 @@
         <div class="collapse" id="collapseExample">
             <table class="table table-sm">
                 <caption>Hugo Variables for current page</caption>
-                <tr><th>Name</th><td>Contact</td></tr>
-                <tr><th>Permalink</th><td>http://example.org/contact/contact-us/</td></tr>
+                <tr><th>Name</th><td>Sample First Post</td></tr>
+                <tr><th>Permalink</th><td>http://example.org/posts/sample-first-post/</td></tr>
                 <tr><th>Kind</th><td>page</td></tr>
-                <tr><th>Type</th><td>contact</td></tr>
+                <tr><th>Type</th><td>posts</td></tr>
                 <tr><th>List Page</th><td>Pages(0)</td></tr>
                 <tr><th>IsPage</th><td>true</td></tr>
                 <tr><th>IsHome</th><td>false</td></tr>
-                <tr><th>Next</th><td>Page(/posts/sample-first-post/index.md)</td></tr>
-                <tr><th>Prev</th><td>Page(/about/about-us/index.md)</td></tr>
-                <tr><th>Section</th><td>Page(/contact)</td></tr>
+                <tr><th>Next</th><td>Page(/posts/sample-second-post/index.md)</td></tr>
+                <tr><th>Prev</th><td>Page(/contact/contact-us/index.md)</td></tr>
+                <tr><th>Section</th><td>Page(/posts)</td></tr>
                 
             </table>
 

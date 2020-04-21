@@ -44,11 +44,11 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link " href="/posts/">Blog</a>
+                        <a class="nav-link  active" href="/posts/">Blog</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link  active" href="/contact/contact-us">Contact</a>
+                        <a class="nav-link " href="/contact/contact-us">Contact</a>
                     </li>
                     
                 </ul>
@@ -65,48 +65,61 @@
     
         
     
-        
-    
 
         <li class="breadcrumb-item small"><a href="/">Home</a></li>
     
 
-        <li class="breadcrumb-item small"><a href="/contact/">Contacts</a></li>
-    
-
-                <li class="breadcrumb-item small active" aria-current="page">Contact</li>
+                <li class="breadcrumb-item small active" aria-current="page">Posts</li>
             </ol>
         </div>
     </nav>
 
 
 
-<div class="container py-4">
-    <h1>Contact</h1>
-    <div class="row pb-5">
-        <div class="col-md-6">
-            <p>We offer free <em>initial</em> consultation.</p>
 
-
-            <form action="/contact-us/" method="POST">
-                <div class="form-group">
-                    <label for="id_name">Name</label> <input type="text" name="name" maxlength="255" class="form-control form-control-sm" required="" id="id_name">
+<div class="container py-4" style="min-height: 80vh;">
+    <h1 class="">Posts</h1>
+    <div class="row">
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow-sm" style="">
+                
+                
+                <img src="/posts/sample-first-post/placeholder.jpg" class="card-img-top" alt="...">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Sample First Post</h5>
+                    <p class="card-text">This is some descriptive text meant to be used as a placeholder.</p>
                 </div>
-
-                <div class="form-group">
-                    <label for="id_email">Email</label> <input type="email" name="email" class="form-control form-control-sm" required="" id="id_email">
+                <div class="card-footer bg-transparent text-muted">
+                    Read in about 2 mins.
+                    <a href="/posts/sample-first-post/" class="stretched-link"><i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-
-                <div class="form-group">
-                    <label for="id_phone">Phone</label> <input type="text" name="phone" maxlength="255" class="form-control form-control-sm" required="" id="id_phone">
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card h-100 shadow-sm" style="">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Sample Second Post</h5>
+                    <p class="card-text">Some text her kjdvkl fjknvkj fvkj fvk fvk fvkf vkf vkf vkf vkhf vkf vkf v.</p>
                 </div>
-
-                <div class="form-group">
-                    <label for="id_message">Message</label> <textarea name="message" cols="40" rows="10" class="form-control form-control-sm" required="" id="id_message"></textarea>
+                <div class="card-footer bg-transparent text-muted">
+                    Read in about 0 mins.
+                    <a href="/posts/sample-second-post/" class="stretched-link"><i class="fas fa-arrow-circle-right"></i></a>
                 </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="pt-4">
+                
 
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </form>
+
+            </div>
         </div>
     </div>
 </div>
@@ -150,16 +163,16 @@
         <div class="collapse" id="collapseExample">
             <table class="table table-sm">
                 <caption>Hugo Variables for current page</caption>
-                <tr><th>Name</th><td>Contact</td></tr>
-                <tr><th>Permalink</th><td>http://example.org/contact/contact-us/</td></tr>
-                <tr><th>Kind</th><td>page</td></tr>
-                <tr><th>Type</th><td>contact</td></tr>
-                <tr><th>List Page</th><td>Pages(0)</td></tr>
-                <tr><th>IsPage</th><td>true</td></tr>
+                <tr><th>Name</th><td>Posts</td></tr>
+                <tr><th>Permalink</th><td>http://example.org/posts/</td></tr>
+                <tr><th>Kind</th><td>section</td></tr>
+                <tr><th>Type</th><td>posts</td></tr>
+                <tr><th>List Page</th><td>Pages(2)</td></tr>
+                <tr><th>IsPage</th><td>false</td></tr>
                 <tr><th>IsHome</th><td>false</td></tr>
-                <tr><th>Next</th><td>Page(/posts/sample-first-post/index.md)</td></tr>
-                <tr><th>Prev</th><td>Page(/about/about-us/index.md)</td></tr>
-                <tr><th>Section</th><td>Page(/contact)</td></tr>
+                <tr><th>Next</th><td></td></tr>
+                <tr><th>Prev</th><td></td></tr>
+                <tr><th>Section</th><td>Page(/posts)</td></tr>
                 
             </table>
 

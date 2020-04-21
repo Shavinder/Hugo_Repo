@@ -1,7 +1,7 @@
 +++
 title = "Sample First Post"
 date = 2020-04-19T19:13:11-07:00
-draft = true
+draft = false
 description = 'This is some descriptive text meant to be used as a placeholder.'
 tags = ["tag1", "tag2"]
 list_pic = "placeholder.jpg"

@@ -3,17 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2020-04-19T19:35:26-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/sample-second-post/</loc>
+    <lastmod>2020-04-19T19:35:26-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-04-19T19:35:26-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/sample-first-post/</loc>
+    <lastmod>2020-04-19T19:13:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/tag1/</loc>
+    <lastmod>2020-04-19T19:13:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/tag2/</loc>
+    <lastmod>2020-04-19T19:13:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2020-04-19T19:13:11-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/contact/contact-us/</loc>
     <lastmod>2020-04-14T17:09:56-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://example.org/contact/</loc>
-    <lastmod>2020-04-14T17:09:56-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/</loc>
     <lastmod>2020-04-14T17:09:56-07:00</lastmod>
   </url>
   
@@ -48,16 +78,17 @@
   </url>
   
   <url>
+    <loc>http://example.org/services/study_permit/</loc>
+    <lastmod>2020-04-12T15:31:54-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/services/work_permit/</loc>
     <lastmod>2020-04-12T15:30:43-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://example.org/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/tags/</loc>
   </url>
   
 </urlset>

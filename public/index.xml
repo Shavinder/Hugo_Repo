@@ -6,10 +6,28 @@
     <description>Recent content on Upshore Immigration Services</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2020 17:09:56 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 19:35:26 -0700</lastBuildDate>
     
 	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sample Second Post</title>
+      <link>http://example.org/posts/sample-second-post/</link>
+      <pubDate>Sun, 19 Apr 2020 19:35:26 -0700</pubDate>
+      
+      <guid>http://example.org/posts/sample-second-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sample First Post</title>
+      <link>http://example.org/posts/sample-first-post/</link>
+      <pubDate>Sun, 19 Apr 2020 19:13:11 -0700</pubDate>
+      
+      <guid>http://example.org/posts/sample-first-post/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et mi mauris. Sed placerat accumsan augue, at ullamcorper orci. Proin tempor vestibulum dignissim. Praesent at tellus dictum, porttitor eros sed, maximus sem. Maecenas maximus, enim in vulputate mollis, tellus arcu tempus libero, ut dictum tortor tellus ut lacus. In egestas rutrum ultricies. Donec porta, quam eu accumsan viverra, lectus odio aliquam quam, in faucibus justo orci a eros. Proin ut odio nec velit bibendum venenatis ac sed urna.</description>
+    </item>
     
     <item>
       <title>Contact</title>
@@ -55,6 +73,15 @@
       
       <guid>http://example.org/services/visitor_visa/</guid>
       <description>Canada is a beautiful country with people of all cultures from around the world. Come as a visitor and fall in love!</description>
+    </item>
+    
+    <item>
+      <title>Study permit</title>
+      <link>http://example.org/services/study_permit/</link>
+      <pubDate>Sun, 12 Apr 2020 15:31:54 -0700</pubDate>
+      
+      <guid>http://example.org/services/study_permit/</guid>
+      <description>Come to study in Canada&amp;rsquo;s esteemed educational institutions. Many students go on to get work permits and become permanent residents.</description>
     </item>
     
     <item>

@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Study permit</title>
+      <link>http://example.org/services/study_permit/</link>
+      <pubDate>Sun, 12 Apr 2020 15:31:54 -0700</pubDate>
+      
+      <guid>http://example.org/services/study_permit/</guid>
+      <description>Come to study in Canada&amp;rsquo;s esteemed educational institutions. Many students go on to get work permits and become permanent residents.</description>
+    </item>
+    
+    <item>
       <title>Work permit</title>
       <link>http://example.org/services/work_permit/</link>
       <pubDate>Sun, 12 Apr 2020 15:30:43 -0700</pubDate>
