@@ -12,33 +12,10 @@ Paginate = 5
 		url = "/"
 		weight = 100
 
-	[[menu.main]]
-		identifier = "services"
-		name = "Services"
-		url = "/services/"
-		weight = 110
-
-	[[menu.main]]
-		identifier = "about"
-		name = "About"
-		url = "/about/about-us"
-		weight = 120
-
-	[[menu.main]]
-		identifier = "posts"
-		name = "Blog"
-		url = "/posts/"
-		weight = 130
-
-	[[menu.main]]
-		identifier = "contact"
-		name = "Contact"
-		url = "/contact/contact-us"
-		weight = 140
-
 [params]
-	brand = "Upshore Immigration"
-	headline = "Choose the Right Immigration Consultant!"
-	description = "We are a Regulated Canadian Immigration Consultancy."
+	brand = "Upshore"
+	headline = "Achieve Your Canadian Dream"
+	adjectives = ["Authorised", "Competent", "Trustworthy"]
+	description = "Regulated Canadian Immigration Consultancy"
 	description2 = "Authorised. Competent. Trustworthy."
 	author = "Shavinder Dandiwal"

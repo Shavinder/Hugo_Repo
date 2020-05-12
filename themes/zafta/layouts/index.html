@@ -1,16 +1,39 @@
+{{define "header"}}
+    
+    {{partial "nav_main.html" .}}
+    
+    <header class="masthead">
+        <div class="container text-light h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="">{{.Site.Params.headline}}</h1>
+                    <p class="lead">We are <span class="js-display-typing">Stream</span><span class="typed-cursor"></span></p>
+                    <a class="btn btn-primary" href="/contact/">
+                        Contact Now <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+{{end}}
+
 {{ define "main" }}
-<div class="jumbotron py-5">
-    <div class="container py-4">
-        <h1 class="display-4">{{ .Site.Params.Headline}}</h1>
-        <p class="lead">{{ .Site.Params.Description }}</p>
-        <p>{{.Site.Params.Description2}}</p>
-        {{with .Site.GetPage "contact"}}
-            <a href="{{.Permalink}}" class="btn btn-primary">Contact Us Now</a>
-        {{end}}
-        {{ .Content }}
+<section class="" style="padding: 100px 60px;">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Who are we?</h2>
+                <p class="lead">
+                    Upshore Immigration Services Inc. is a licensed Canadian Immigration Consultancy company. We are authorized to deal in Canadian Immigration services by ICCRC, the regulatory body for Canadian Immigration consultants.
+                </p>
+                <a href="/about/" class="btn btn-primary">About us</a>
+            </div>
+        </div>
     </div>
-</div>
-<section style="min-height: 100vh;  padding-top: 60px; padding-bottom:60px;" class="bg-white">
+</section>
+
+<section style="min-height: 100vh;  padding: 100px 60px;" class="bg-light">
     <div class="container">
         <h2 class="text-center mb-5">Services</h2>
         <div class="row">
@@ -37,78 +60,92 @@
             {{ end }}
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 {{with .Site.GetPage "services"}}
-                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">All Services...</a>
+                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">Our Services</a>
                 {{end}}
             </div>
         </div>
     </div>
 </section>
-<section class="bg-light" style="min-height:100vh; padding-top: 60px; padding-bottom:60px; ">
+<section class="" style="min-height:60vh; padding: 100px 60px; ">
     <div class="container">
         <h2 class="text-center mb-5">Why us</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="card border shadow bg-white h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Authorised</h5>
-                        <p class="card-text" style="line-height: 2em;">Upshore Immigration Services is authorised by ICCRC, the Immigration Consultants of Canada Regulatory Council.</p>
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4 text-primary"><i class="fas fa-stamp"></i></h1>
+                        <h4 class="card-title text-primary">Authorised</h4>
+                        <p class="card-text">Upshore Immigration Services is authorised by ICCRC, the Immigration Consultants of Canada Regulatory Council.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card shadow bg-white mb-3 h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Transparent</h5>
-                        <p class="card-text" style="line-height: 2em;">All the stages of the application process shall be explained clearly in simple terms so that you always know what to expect.</p>
+                
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4 text-primary"><i class="fas fa-sun"></i></h1>
+                        <h4 class="card-title text-primary">Transparent</h4>
+                        <p class="card-text">All the stages of the application process shall be explained clearly in simple terms so that you always know what to expect.</p>
+                        
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card shadow bg-white mb-3 h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">We</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">maintain confidentiality,</li>
-                            <li class="list-group-item">quality of service,</li>
-                            <li class="list-group-item">work within the law, and</li>
-                            <li class="list-group-item">are affordable.</li>
+
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4 text-primary"><i class="fas fa-handshake"></i></h1>                      
+                        <h4 class="card-title text-primary">We</h4>
+                        <ul class="">
+                            <li class="">maintain confidentiality</li>
+                            <li class="">provide quality service</li>
+                            <li class="">are affordable</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col text-center">
+                <a href="/contact/" class="btn btn-primary">Contact us now</a>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="bg-transparent" style="min-height:100vh; padding-top: 60px; padding-bottom:60px; ">
+<section class="bg-light" style="min-height:100vh; padding: 100px 60px; ">
     <div class="container">
         <div class="row">
             <div class="col">
-                {{ $recentposts := 5 }}
+                {{ $recentposts := 2 }}
                 {{ if .Params.recentposts }}
                 {{ $recentposts = .Params.recentposts }}
                 {{ end }}
 
                 <h2 class="text-center">Recent posts</h2>
 
-                {{ range first $recentposts (where .Pages "Type" "posts" ) }}
+                {{ range first $recentposts (where .Pages "Type" "blog" ) }}
                 {{range .Pages}}
                 <h2 class="mt-5"> <a class="text-body" href="{{ .RelPermalink}}"> {{ .Title | markdownify}} </a> </h2>
-                {{ if .Params.Subtitle }}
-                <h3 class="font-weight-light font-italic mb-3">
-                    {{ .Params.Subtitle | markdownify }}
-                </h3>
+                {{ if .Params.description }}
+                <p class="lead mb-3">
+                    {{ .Params.description }}
+                </p>
                 {{ end }}
 
-                <p class="text-muted mt-3">
-                    <a class="text-muted" href="{{ .Permalink }}">Published {{ .Date.Format "January 2, 2006"  }}</a>
+            <p class="text-muted mt-3">
+                <a class="text-muted" href="{{ .Permalink }}"> {{ .Lastmod.Format "January 2, 2006"  }}</a> |
 
-                    {{ range .Params.tags }}
-                    <a class="text-muted" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-                    {{ end }}
-                </p>
+                {{ range .Params.categories }}
+                <a class="text-muted" href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ .|humanize }}</a> |
+                {{ end }}
+
+                {{ range .Params.tags }}
+                <a class="text-muted" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+                {{ end }}
+            </p>
 
                 <article class="article">
                     <p>{{ .Summary }}</p>
@@ -121,5 +158,17 @@
             </div>
         </div>
     </div>
+</section>
+<section style="min-height:500px; padding: 100px 60px; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Free Initial Consultation!</h2>
+                <p>We provide a free <i>initial</i> consulation. Contact us today to discuss your situation and options. Your information is always kept confidential and private.</p>
+                <a class="btn btn-danger" href="tel:+1 (780) 8060.2050">Call us now!</a>
+            </div>
+        </div>
+    </div>
+
 </section>
 {{ end }}

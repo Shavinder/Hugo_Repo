@@ -1,7 +1,8 @@
 ---
-title: "About Us"
+title: "about"
 date: 2020-04-14T16:10:35-07:00
 draft: false
+menu: "main"
 ---
 ## Welcome to Upshore Immigration Services
 ---

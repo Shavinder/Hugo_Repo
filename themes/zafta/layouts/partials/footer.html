@@ -1,57 +1,56 @@
-<footer class="footer bg-dark py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 py-3">
-                <h6 class="text-light"> Contact us:</h6>
-                <ul class="list-unstyled">
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center text-md-left mb-3 mb-md-0">
+                    <small class="text-white">&copy; 2020 <a class="text-white" href="https://upshoreimmigration.com">Upshore Immigration Services Inc.</a> All Rights Reserved.</small>
+                </div>
 
-                    <li><a class="text-decoration-none" href="mailto: info@upshoreimmigration.com"><i class="fas fa-envelope mr-1" aria-hidden="true"></i> info@upshoreimmigration.com</a></li>
-                    <li><a class="" href="tel:+1 (780) 860-2050"><i class="fas fa-phone mr-1" aria-hidden="true"></i>+1 (780) 860 2050</a></li>
-                    <li><a class="" href="https://wa.me/17808602050"><i class="fab fa-whatsapp mr-1" aria-hidden="true"></i>WhatsApp</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-12 col-md-6 py-3">
-                <h6 class="text-light">Follow us:</h6>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://twitter.com/UpshoreServices"><i class="fab fa-twitter-square  fa-2x" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/upshoreimmigration/"><i class="fab fa-instagram-square  fa-2x" aria-hidden="true"></i></a>
-                        <a href=""><i class="fab fa-linkedin  fa-2x" aria-hidden="true"></i></a>
-                        <a href=""><i class="fab fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col py-3">
-                <p class="text-light"><small>Copyright <i class="far fa-copyright"></i> www.upshoreimmigration.com. All rights are reserved.</small></p>
+                <div class="col-md-4 align-self-center">
+                    <ul class="list-inline text-center text-md-right mb-0">
+                        <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <a class="text-white" target="_blank" href="https://twitter.com/upshoreservices">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Instagram">
+                            <a class="text-white" target="_blank" href="https://www.instagram.com/upshoreimmigration/">
+                                <i class="fab fa-instagram-square fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-       
-    </div>
-    <div class="container">
-        <p>
-            <a class="link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Link with href
-            </a>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <table class="table table-sm">
-                <caption>Hugo Variables for current page</caption>
-                <tr><th>Name</th><td>{{ .Name }}</td></tr>
-                <tr><th>Permalink</th><td>{{ .Permalink }}</td></tr>
-                <tr><th>Kind</th><td>{{ .Kind }}</td></tr>
-                <tr><th>Type</th><td>{{ .Type }}</td></tr>
-                <tr><th>List Page</th><td>{{.Pages}}</td></tr>
-                <tr><th>IsPage</th><td>{{ .IsPage }}</td></tr>
-                <tr><th>IsHome</th><td>{{ .IsHome }}</td></tr>
-                <tr><th>Next</th><td>{{ .Next }}</td></tr>
-                <tr><th>Prev</th><td>{{ .Prev }}</td></tr>
-                <tr><th>Section</th><td>{{ .CurrentSection }}</td></tr>
-                
-            </table>
+        <div class="container">
+            <p>
+                <a class="text-black" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <table class="table table-sm bg-light">
+                    <caption>Hugo Variables for current page</caption>
+                    <tr><th>Name</th><td>{{ .Name }}</td></tr>
+                    <tr><th>Permalink</th><td>{{ .Permalink }}</td></tr>
+                    <tr><th>Kind</th><td>{{ .Kind }}</td></tr>
+                    <tr><th>Type</th><td>{{ .Type }}</td></tr>
+                    <tr><th>Title</th><td>{{ .Title }}</td></tr>
+                    <tr><th>List Page</th><td>{{.Pages}}</td></tr>
+                    <tr><th>IsPage</th><td>{{ .IsPage }}</td></tr>
+                    <tr><th>IsHome</th><td>{{ .IsHome }}</td></tr>
+                    <tr><th>Next</th><td>{{ .Next }}</td></tr>
+                    <tr><th>Prev</th><td>{{ .Prev }}</td></tr>
+                    <tr><th>Current Page</th><td>{{.}}</td></tr>
+                    <tr><th>URL</th><td>{{.URL}}</td></tr>
+                    <tr><th>Section</th><td>{{ .CurrentSection }}</td></tr>
+
+
+
+                </table>
+
+            </div>
 
         </div>
-
-    </div>
-</footer>
+    </footer>
+<!-- End Footer -->

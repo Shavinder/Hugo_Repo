@@ -1,0 +1,114 @@
+{{define "header"}}
+    <header>
+        {{partial "nav_main.html" .}}
+        {{partial "header_blog.html" .}}
+        {{partial "breadcrumb.html" .}}
+    </header>
+{{end}}
+{{ define "main" }}
+
+<div class="container py-4">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            {{range (.Paginator 5).Pages.ByDate}}
+            <!-- Blog Post -->
+            <h3>{{.Title}}</h3>
+
+            <p class="text-muted ">
+                {{.Lastmod.Format "Jan 2, 2006"}}
+                by {{.Params.author}}
+
+                <i class="fas fa-folder-open"></i>
+                {{range (.GetTerms "categories")}}
+                <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle|humanize }}</a>
+                {{end}}
+
+                <i class="fas fa-tag"></i>
+                {{range (.GetTerms "tags")}}
+                <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                {{end}}
+            </p>
+
+            {{if .Params.List_pic}}
+            {{$pic:= .Resources.GetMatch .Params.List_pic}}
+            <img src="{{$pic.RelPermalink}}" class="mb-3" alt="...">
+            {{end}}
+
+            <p class="lead">{{.Description}}</p>
+            <a href="{{.RelPermalink}}" class="">Read More </a>
+            <hr class="mb-5"/>
+
+            {{end}}
+        </div>
+
+            <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <!-- Search Widget -->
+            <div class="input-group mt-5">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+            </div>
+
+            
+
+            <!-- Categories Widget -->
+            <div class="card my-4">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/categories/" class="">Categories</a></h5>
+                    <ul class="list-inline mb-0">
+                        {{ range $key, $val:= .Site.Taxonomies.categories}}
+                        <li class="list-inline-item">
+                            <a class="" href="/categories/{{$key}}/">{{$key|humanize}}</a>
+                        </li>
+                        {{end}}
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Side Widget -->
+            <div class="card my-4">
+
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/tags/" class="">Tags</a></h5>
+                    <ul class="list-inline mb-0">
+                        {{ range $key, $val:= .Site.Taxonomies.tags}}
+                        <li class="list-inline-item">
+                            <a class="" href="/tags/{{$key}}/">{{$key|humanize}}</a>
+                        </li>
+                        {{end}}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!--
+            <div class="card shadow-sm">
+                {{if .Params.List_pic}}
+                {{$pic:= .Resources.GetMatch .Params.List_pic}}
+                <img src="{{$pic.RelPermalink}}" class="card-img-top" alt="...">
+                {{end}}
+                <div class="card-body">
+                    <h5 class="card-title">{{.Title}}</h5>
+                    <p class="card-text">{{.Description}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-muted">
+                    Read in about {{.ReadingTime}} mins.
+                    <a href="{{.RelPermalink}}" class="stretched-link"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        -->
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="pt-4">
+                {{ template "_internal/pagination.html" . }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

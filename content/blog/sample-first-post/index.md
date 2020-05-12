@@ -3,8 +3,10 @@ title = "Sample First Post"
 date = 2020-04-19T19:13:11-07:00
 draft = false
 description = 'This is some descriptive text meant to be used as a placeholder.'
+categories = ["updates","cat-2"]
 tags = ["tag1", "tag2"]
 list_pic = "placeholder.jpg"
+author = "Shavinder Dandiwal"
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et mi mauris. Sed placerat accumsan augue, at ullamcorper orci. Proin tempor vestibulum dignissim. Praesent at tellus dictum, porttitor eros sed, maximus sem. Maecenas maximus, enim in vulputate mollis, tellus arcu tempus libero, ut dictum tortor tellus ut lacus. In egestas rutrum ultricies. Donec porta, quam eu accumsan viverra, lectus odio aliquam quam, in faucibus justo orci a eros. Proin ut odio nec velit bibendum venenatis ac sed urna. Donec suscipit in tellus in elementum. Pellentesque quis tincidunt turpis. Mauris consequat ipsum at ligula suscipit varius et ut nunc. Ut vitae mauris ullamcorper, elementum velit in, tempor nisl. Donec sagittis quam lectus, sed vestibulum ante rutrum sed. Sed vitae tincidunt nisi. Vestibulum gravida ex sodales facilisis tempus. Donec in est placerat, interdum metus at, convallis est.

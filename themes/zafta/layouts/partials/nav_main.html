@@ -1,23 +1,27 @@
-
-    <nav class="navbar navbar-expand-lg bg-dark text-white navbar-dark ">
-        <div class="container">
-            <a class="navbar-brand" href="{{ "/" | relURL}}">
-                <img src="/images/logo.png" class="text-primary" width="30" height="30" alt="">
-                {{.Site.Params.brand}}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    {{ $currentPage := . }}
-                    {{ range .Site.Menus.main }}
-                    <li class="nav-item">
-                        <a class="nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </div>
+<!-- Navbar -->
+<nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ "/" | relURL}}">
+            <img src="/images/logo.png" class="text-primary" width="30" height="30" alt="">{{.Site.Params.brand}}
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <li class="nav-item">
+                    <a class="nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq $currentPage.Section .Name) }} active{{end}}" href="{{.URL}}">{{ .Name | humanize }}</a>
+                </li>
+                {{ end }}
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+<!-- End Navbar -->

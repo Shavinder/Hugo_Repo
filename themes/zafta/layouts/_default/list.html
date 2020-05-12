@@ -1,24 +1,26 @@
+{{ define "header"}}
+    <header>
+        {{partial "nav_main.html" .}}
+        {{partial "header_regular.html" .}}
+        {{partial "breadcrumb.html" .}}
+    </header>
+{{ end }}
 {{ define "main" }}
-{{partial "breadcrumb.html" . }}
-
-<div class="container py-4" style="min-height: 80vh;">
-    <h1>{{.Type | humanize}}</h1>
-    <div class="row">
-        <div class="col-md-6">
-            {{.Content}}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="list-group-flush">
-                {{ range .Paginator.Pages }}
-                <a href="{{.RelPermalink}}" class="list-group-item list-group-item-action">{{ .Title | markdownify }}</a>
-                {{ end }}
-            </div>
-            <div class="d-flex justify-content-center pt-4">
-                {{ template "_internal/pagination.html" . }}
+    <div class="container py-4" style="min-height: 80vh;">
+       
+        <h1>{{.Title | humanize}}</h1>
+        <div class="row">
+            <div class="col-md-8">
+                {{.Content}}
+                <ul class="">
+                    {{ range .Paginator.Pages }}
+                    <li class=""><a href="{{.RelPermalink}}">{{ .Title | markdownify }}</a></li>
+                    {{ end }}
+                </ul>
+                <div class="d-flex justify-content-center pt-4">
+                    {{ template "_internal/pagination.html" . }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-{{ end }} 
+{{ end }}

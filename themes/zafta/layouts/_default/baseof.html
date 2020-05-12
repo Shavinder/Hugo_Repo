@@ -3,9 +3,9 @@
 {{- partial "head.html" . -}}
 {{ block "extra_css" . }}{{ end }}
 <body>
-    {{ partial "nav_main.html" . }}
 
-    
+    {{ block "header" .}}{{ end }}
+   
     {{- block "main" . }}{{- end }}
     
     {{- partial "footer.html" . -}}
