@@ -9,8 +9,10 @@
                     {{.Type|humanize}}
                     {{end}}
                 </h1>
-                {{if .Description}}
-                <p class="lead">{{.Description}}</p>
+                {{if (eq .Kind "section")}}
+                    {{if .Description}}
+                        <p class="lead">{{.Description}}</p>
+                    {{end}}
                 {{end}}
             </div>
         </div>
