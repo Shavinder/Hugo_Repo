@@ -1,7 +1,7 @@
 {{define "header"}}
     <header>
-        {{partial "nav_main.html" .}}
-        {{partial "header_blog.html" .}}
+        {{partial "nav_regular.html" .}}
+        {{partial "header_regular.html" .}}
         {{partial "breadcrumb.html" .}}
     </header>
 {{end}}
@@ -32,7 +32,7 @@
 
             {{if .Params.List_pic}}
             {{$pic:= .Resources.GetMatch .Params.List_pic}}
-            <img src="{{$pic.RelPermalink}}" class="mb-3" alt="...">
+            <img src="{{$pic.RelPermalink}}" class="img-fluid mb-3" alt="...">
             {{end}}
 
             <p class="lead">{{.Description}}</p>

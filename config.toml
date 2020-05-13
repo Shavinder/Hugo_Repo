@@ -15,7 +15,6 @@ Paginate = 5
 [params]
 	brand = "Upshore"
 	headline = "Achieve Your Canadian Dream"
-	adjectives = ["Authorised", "Competent", "Trustworthy"]
-	description = "Regulated Canadian Immigration Consultancy"
+	description = "Authorised Canadian Immigration Consultant"
 	description2 = "Authorised. Competent. Trustworthy."
 	author = "Shavinder Dandiwal"

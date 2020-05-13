@@ -1,5 +1,5 @@
 
-.masthead {
+.masthead-main {
 	height: 80vh;
 	min-height: 500px;
 	background-color: #065d8f;
@@ -8,7 +8,18 @@
 	background-size: cover;
 	background-position: 50% 0%;
 }
-
+.masthead-regular {
+	height: 60vh;
+	min-height: 500px;
+	background-color: #10253a;
+	background-image: url("../img/ocean3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 0%;
+}
+.navbar-regular {
+	background-color: #10253a;
+}
 .navbar-bg-onscroll.fixed-top {
 	background-color: #065F92;
 

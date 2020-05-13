@@ -1,11 +1,18 @@
-<div class="jumbotron jumbotron-fluid text-center bg-primary bg-blue-waves text-white">
-    <div class="container">
-        <h1 class="display-4">
-            {{if (eq .Type "page")}}
-            {{.Title|humanize}}
-            {{else}}
-            {{.Type|humanize}}
-            {{end}}
-        </h1>
+<header class="masthead-regular">
+    <div class="container text-light h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="">
+                    {{if (eq .Type "page")}}
+                    {{.Title|humanize}}
+                    {{else}}
+                    {{.Type|humanize}}
+                    {{end}}
+                </h1>
+                {{if .Description}}
+                <p class="lead">{{.Description}}</p>
+                {{end}}
+            </div>
+        </div>
     </div>
-</div>
+</header>
