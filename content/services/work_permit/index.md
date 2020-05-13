@@ -7,4 +7,4 @@ featured: true
 description : "Work permits are granted under many categories such as LMIA based, LMIA exempted, NAFTA, Open, Post Graduate & Intra-company transferee."
 ---
 
-Work permits are granted under many categories such as LMIA based, LMIA exempted, NAFTA, Open, Post Graduate & Intra-company transferee.
+This is the body text. Work permits are granted under many categories such as LMIA based, LMIA exempted, NAFTA, Open, Post Graduate & Intra-company transferee.

@@ -25,7 +25,7 @@
             {{range (where .Pages "Type" "services")}}
             {{range .Pages}}
             {{if eq .Params.Featured true}}
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-md-6 mb-4">
                 <div class="card h-100 shadow-sm" style="">
                     {{if .Params.List_pic}}
                     {{$pic:= .Resources.GetMatch .Params.List_pic}}
@@ -140,15 +140,18 @@
         </div>
     </div>
 </section>
-<section style="min-height:500px; padding-top: 100px; padding-bottom: 60px; ">
+<section style="min-height:400px; padding-top: 100px; padding-bottom: 60px; ">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h2>Free Initial Consultation!</h2>
                 <p>We provide a free <i>initial</i> consulation. Contact us today to discuss your situation and options. Your information is always kept confidential and private.</p>
-                <a class="btn btn-danger" href="tel:+1 (780) 8060.2050">Call us now!</a>
+                <a class="btn btn-danger btn-lg" href="tel:+1 (780) 8060.2050">Call now!</a> &nbsp;
+                <a class="btn btn-outline-primary btn-lg" href="mailto:upshoreimmigration@gmail.com">Email Now!</a>
+
             </div>
         </div>
+
     </div>
 
 </section>
