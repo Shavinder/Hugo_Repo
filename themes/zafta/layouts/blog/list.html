@@ -1,24 +1,29 @@
-{{define "header"}}
-    <header>
-        {{partial "nav_regular.html" .}}
-        {{partial "header_regular.html" .}}
-        {{partial "breadcrumb.html" .}}
-    </header>
-{{end}}
-{{ define "main" }}
 
-<div class="container py-4">
+{{ define "main" }}
+{{partial "nav_regular.html" .}}
+    <header class="py-5 mb-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4 text-primary">{{.Title|humanize}}</h1>
+                    <p class="lead">{{.Description}}</p>
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="container pb-5">
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
             {{range (.Paginator 5).Pages.ByDate}}
             <!-- Blog Post -->
-            <h3>{{.Title}}</h3>
+            <h2><a href="{{.RelPermalink}}">{{.Title}}</a></h2>
 
             <p class="text-muted ">
                 {{.Lastmod.Format "Jan 2, 2006"}}
+                {{if .Params.author}}
                 by {{.Params.author}}
-
+                {{end}}
                 <i class="fas fa-folder-open"></i>
                 {{range (.GetTerms "categories")}}
                 <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle|humanize }}</a>
@@ -37,12 +42,12 @@
 
             <p class="lead">{{.Description}}</p>
             <a href="{{.RelPermalink}}" class="">Read More </a>
-            <hr class="mb-5"/>
+            <hr class="mb-5" />
 
             {{end}}
         </div>
 
-            <!-- Sidebar Widgets Column -->
+        <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
             <!-- Search Widget -->
             <div class="input-group mt-5">
@@ -52,7 +57,7 @@
                 </span>
             </div>
 
-            
+
 
             <!-- Categories Widget -->
             <div class="card my-4">

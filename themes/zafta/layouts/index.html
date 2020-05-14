@@ -1,9 +1,7 @@
-{{define "header"}}
-    {{partial "nav_main.html" .}}
-    {{partial "header_main.html" .}}
-{{end}}
 
 {{ define "main" }}
+{{partial "nav_main.html" .}}
+{{partial "header_main.html" .}}
 <section class="" style="padding-top: 100px; padding-bottom: 60px;">
     <div class="container">
         <div class="row">
@@ -67,13 +65,13 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                
+
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <h1 class="display-4 text-primary"><i class="fas fa-sun"></i></h1>
                         <h4 class="card-title text-primary">Transparent</h4>
                         <p class="card-text">All the stages of the application process shall be explained clearly in simple terms so that you always know what to expect.</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -81,7 +79,7 @@
 
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                        <h1 class="display-4 text-primary"><i class="fas fa-handshake"></i></h1>                      
+                        <h1 class="display-4 text-primary"><i class="fas fa-handshake"></i></h1>
                         <h4 class="card-title text-primary">We</h4>
                         <ul class="">
                             <li class="">maintain confidentiality</li>
@@ -106,35 +104,35 @@
             <div class="col">
                 {{ $recentposts := 2 }}
                 {{ if .Params.recentposts }}
-                    {{ $recentposts = .Params.recentposts }}
+                {{ $recentposts = .Params.recentposts }}
                 {{ end }}
 
                 <h2 class="text-center">Recent posts</h2>
 
                 {{ range first $recentposts (where .Pages "Type" "blog" ) }}
-                    {{range .Pages}}
-                        <h2 class="mt-5"> <a class="text-body" href="{{ .RelPermalink}}"> {{ .Title | markdownify}} </a> </h2>
-                        {{ if .Params.description }}
-                        <p class="lead mb-3">
-                            {{ .Params.description }}
-                        </p>
-                        {{ end }}
+                {{range .Pages}}
+                <h2 class="mt-5"> <a class="text-body" href="{{ .RelPermalink}}"> {{ .Title | markdownify}} </a> </h2>
+                {{ if .Params.description }}
+                <p class="lead mb-3">
+                    {{ .Params.description }}
+                </p>
+                {{ end }}
 
-                        <p class="text-muted mt-3">
-                            <a class="text-muted" href="{{ .Permalink }}"> {{ .Lastmod.Format "January 2, 2006"  }}</a> |
+                <p class="text-muted mt-3">
+                    <a class="text-muted" href="{{ .Permalink }}"> {{ .Lastmod.Format "January 2, 2006"  }}</a> |
 
-                            {{ range .Params.categories }}
-                            <a class="text-muted" href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ .|humanize }}</a> |
-                            {{ end }}
+                    {{ range .Params.categories }}
+                    <a class="text-muted" href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ .|humanize }}</a> |
+                    {{ end }}
 
-                            {{ range .Params.tags }}
-                            <a class="text-muted" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
-                            {{ end }}
-                        </p>
-                            <p>{{ .Summary }}</p>
-                            <p class="text-muted">Reading time: about {{ .ReadingTime }} minutes</p>
-                            <p><a class="btn btn-primary" href="{{ .URL | relURL }}">Read more...</a></p>
-                    {{end}}
+                    {{ range .Params.tags }}
+                    <a class="text-muted" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
+                    {{ end }}
+                </p>
+                <p>{{ .Summary }}</p>
+                <p class="text-muted">Reading time: about {{ .ReadingTime }} minutes</p>
+                <p><a class="btn btn-primary" href="{{ .URL | relURL }}">Read more...</a></p>
+                {{end}}
                 {{ end }}
             </div>
         </div>

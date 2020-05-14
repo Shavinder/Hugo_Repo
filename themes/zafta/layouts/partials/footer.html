@@ -51,7 +51,12 @@
                     <tr><th>Prev</th><td>{{ .Prev }}</td></tr>
                     <tr><th>Current Page</th><td>{{.}}</td></tr>
                     <tr><th>URL</th><td>{{.URL}}</td></tr>
-                    <tr><th>Section</th><td>{{ .CurrentSection }}</td></tr>
+                    <tr><th>.Parent</th><td>{{ .Parent }}</td></tr>
+                    <tr><th>.Section</th><td>{{ .Section }}</td></tr>
+                    <tr><th>.CurrentSection</th><td>{{ .CurrentSection }}</td></tr>
+                    <tr><th>.FirstSection?</th><td>{{ .FirstSection }}</td></tr>
+                    <tr><th>Is Current Section Home?</th><td>{{ (.CurrentSection).IsHome }}</td></tr>
+
 
 
 

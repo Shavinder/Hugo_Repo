@@ -9,6 +9,7 @@ list_pic = "placeholder.jpg"
 author = "Mehraj Dandiwal"
 +++
 
+Government announces sweeping changes to the immigration policy.
 {{<raw>}}
 <figure>
 	<img src="placeholder.jpg" class="img-fluid" alt="post image" title="image title" caption="this is a worded caption" />
@@ -16,7 +17,8 @@ author = "Mehraj Dandiwal"
 This is the caption for the image.
 </figcaption>
 </figure>
-{{<raw>}}
+{{</raw>}}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et mi mauris. Sed placerat accumsan augue, at ullamcorper orci. Proin tempor vestibulum dignissim. Praesent at tellus dictum, porttitor eros sed, maximus sem. Maecenas maximus, enim in vulputate mollis, tellus arcu tempus libero, ut dictum tortor tellus ut lacus. In egestas rutrum ultricies. Donec porta, quam eu accumsan viverra, lectus odio aliquam quam, in faucibus justo orci a eros. Proin ut odio nec velit bibendum venenatis ac sed urna. Donec suscipit in tellus in elementum. Pellentesque quis tincidunt turpis. Mauris consequat ipsum at ligula suscipit varius et ut nunc. Ut vitae mauris ullamcorper, elementum velit in, tempor nisl. Donec sagittis quam lectus, sed vestibulum ante rutrum sed. Sed vitae tincidunt nisi. Vestibulum gravida ex sodales facilisis tempus. Donec in est placerat, interdum metus at, convallis est.
 
 In lacinia eros id felis porta maximus. Cras non mollis diam, et volutpat dolor. Cras dictum quam magna, nec auctor elit luctus semper. Nulla placerat, ipsum eget vestibulum semper, orci diam gravida nunc, ut vehicula nibh nisi eu enim. Suspendisse eget arcu nunc. Cras arcu leo, aliquet ut augue quis, blandit convallis sem. Phasellus eu dolor vel tortor lobortis cursus et quis sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sed facilisis quam. Curabitur pretium aliquam sagittis. Nullam a leo non urna auctor bibendum. Aenean consequat lacinia elit, id mollis urna condimentum ac. Vivamus a tortor lectus.

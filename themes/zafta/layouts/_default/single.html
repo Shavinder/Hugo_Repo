@@ -1,17 +1,20 @@
-{{ define "header"}}
-    <header>
-        {{partial "nav_regular.html" .}}
-        {{partial "header_regular.html" .}}
-        {{partial "breadcrumb.html" .}}
-    </header>
-{{ end }}
-
 {{ define "main" }}
-
-<div class="container py-5" style="min-height:80vh;">
+{{partial "nav_regular.html" .}}
+{{if not (.Parent).IsHome}}
+{{partial "breadcrumb.html" .}}
+{{end}}
+<div class="container pb-5" style="min-height:80vh;">
+    <div class="row py-3">
+        <div class="col">
+            <h1>{{.Title|humanize}}</h1>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-md-10 mx-auto">
-            {{.Content}}
+        <div class="col-md-8">
+            <article class="article">
+                {{ .Content }}
+            </article>
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back</a></p>
         </div>
     </div>
 </div>

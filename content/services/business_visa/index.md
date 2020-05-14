@@ -4,7 +4,6 @@ date: 2020-04-13T20:46:23-07:00
 draft: false
 list_pic: "business.jpg"
 featured: false
-description: ""
 ---
 
 This is business visa

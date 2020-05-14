@@ -1,26 +1,33 @@
-{{ define "header"}}
-    <header>
-        {{partial "nav_regular.html" .}}
-        {{partial "header_regular.html" .}}
-        {{partial "breadcrumb.html" .}}
-    </header>
-{{ end }}
 {{ define "main" }}
-    <div class="container py-4" style="min-height: 80vh;">
-       
-        <h1>{{.Title | humanize}}</h1>
-        <div class="row">
-            <div class="col-md-10">
-                {{.Content}}
-                <ul class="">
-                    {{ range .Paginator.Pages }}
-                    <li class=""><a href="{{.RelPermalink}}">{{ .Title | markdownify }}</a></li>
-                    {{ end }}
-                </ul>
-                <div class="d-flex justify-content-center pt-4">
-                    {{ template "_internal/pagination.html" . }}
+    {{partial "nav_regular.html" .}}
+    {{if not (.Parent).IsHome}}
+        {{partial "breadcrumb.html" .}}
+    {{end}}
+    <header class="py-5 mb-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4 text-primary">{{.Title|humanize}}</h1>
+                    <p class="lead">{{.Description}}</p>
                 </div>
             </div>
         </div>
+    </header>
+
+<div class="container py-4" style="min-height: 80vh;">
+    <div class="row">
+        <div class="col-md-10">
+            
+            {{.Content}}
+            <ul class="">
+                {{ range .Paginator.Pages }}
+                <li class=""><a href="{{.RelPermalink}}">{{ .Title | markdownify }}</a></li>
+                {{ end }}
+            </ul>
+            <div class="d-flex justify-content-center pt-4">
+                {{ template "_internal/pagination.html" . }}
+            </div>
+        </div>
     </div>
+</div>
 {{ end }}

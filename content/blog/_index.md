@@ -1,7 +1,8 @@
 ---
-title: "blog"
+title: "Upshore Immigration blog"
+linktitle: "blog"
 draft: false
 menu: "main"
 weight: 130
-description: "Upshore Immigration brings you insightful information from the world of immigration"
+description: "Insightful information from the world of Canadian immigration"
 ---
