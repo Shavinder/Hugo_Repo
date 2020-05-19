@@ -18,34 +18,29 @@
 
 <section style="min-height: 100vh;  padding-top: 100px; padding-bottom: 60px;" class="bg-light">
     <div class="container">
-        <h2 class="text-center mb-5">Services</h2>
-        <div class="row">
-            {{range (where .Pages "Type" "services")}}
-            {{range .Pages}}
-            {{if eq .Params.Featured true}}
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 shadow-sm" style="">
-                    {{if .Params.List_pic}}
-                    {{$pic:= .Resources.GetMatch .Params.List_pic}}
-                    <img src="{{$pic.RelPermalink}}" class="card-img-top" alt="...">
-                    {{end}}
-                    <div class="card-body">
-                        <h5 class="card-title">{{.Title}}</h5>
-                        <p class="card-text">{{.Description}}</p>
+        <h2 class="text-center mb-5">Popular programs</h2>
+        <div class="row d-flex justify-content-center">
+            {{range (where .Site.RegularPages "Section" "programs")}}
+                {{if eq .Params.List_in_popular_section true}}
+                    <div class="col-md-4 col-lg-3 mb-4" >
+                        <div class="card h-100 text-center">
+                            {{if .Params.List_pic}}
+                                {{$pic:= .Resources.GetMatch .Params.List_pic}}
+                                <img src="{{$pic.RelPermalink}}" class="card-img-top " alt="...">
+                            {{end}}
+                            <div class="card-body bg-transparent">
+                                <h6 class="card-title"><a href="{{.RelPermalink}}">{{.Title}}</a></h6>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <a href="{{.Permalink}}" class="card-link">More <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            {{end}}
-            {{end}}
+                {{end}}
+            
             {{ end }}
         </div>
         <div class="row">
             <div class="col text-center">
-                {{with .Site.GetPage "services"}}
-                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">Our Services</a>
+                {{with .Site.GetPage "programs"}}
+                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">Know Various Immigration Programs</a>
                 {{end}}
             </div>
         </div>
@@ -59,7 +54,7 @@
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <h1 class="display-4 text-primary"><i class="fas fa-stamp"></i></h1>
-                        <h4 class="card-title text-primary">Authorised</h4>
+                        <h4 class="card-title text-dark">Authorised</h4>
                         <p class="card-text">Upshore Immigration Services is authorised by ICCRC, the Immigration Consultants of Canada Regulatory Council.</p>
                     </div>
                 </div>
@@ -69,7 +64,7 @@
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <h1 class="display-4 text-primary"><i class="fas fa-sun"></i></h1>
-                        <h4 class="card-title text-primary">Transparent</h4>
+                        <h4 class="card-title text-dark">Transparent</h4>
                         <p class="card-text">All the stages of the application process shall be explained clearly in simple terms so that you always know what to expect.</p>
 
                     </div>
@@ -80,7 +75,7 @@
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <h1 class="display-4 text-primary"><i class="fas fa-handshake"></i></h1>
-                        <h4 class="card-title text-primary">We</h4>
+                        <h4 class="card-title text-dark">We</h4>
                         <ul class="">
                             <li class="">maintain confidentiality</li>
                             <li class="">provide quality service</li>

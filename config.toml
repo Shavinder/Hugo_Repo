@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Upshore Immigration Services"
 theme = "zafta"
 MetaDataFormat = "toml"
-Paginate = 5
+Paginate = 10
 
 [menu]
 	[[menu.main]]

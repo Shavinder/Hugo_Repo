@@ -3,7 +3,6 @@ title = "Sample Second Post"
 date = 2020-04-20T19:35:26-07:00
 lastmod = 2020-05-11
 draft = false
-subtitle = 'Government takes steps to help out small businesses.'
 categories = ["news"]
 tags = ["tag3", "tag4"]
 # list_pic =

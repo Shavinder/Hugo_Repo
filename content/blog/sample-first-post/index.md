@@ -1,8 +1,7 @@
 +++
-title = "Sample First Post"
+title = "The New Federal Pilot program"
 date = 2020-04-19T19:13:11-07:00
 draft = false
-description = 'This is some descriptive text meant to be used as a placeholder.'
 categories = ["updates","cat-2"]
 tags = ["tag1", "tag2"]
 list_pic = "placeholder.jpg"
@@ -13,9 +12,7 @@ Government announces sweeping changes to the immigration policy.
 {{<raw>}}
 <figure>
 	<img src="placeholder.jpg" class="img-fluid" alt="post image" title="image title" caption="this is a worded caption" />
-<figcaption>
-This is the caption for the image.
-</figcaption>
+<figcaption>This is the caption for the image.</figcaption>
 </figure>
 {{</raw>}}
 

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="display-4 text-primary">{{.Title|humanize}}</h1>
+                    <h1 class="">{{.Title|humanize}}</h1>
                     <p class="lead">{{.Description}}</p>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             <img src="{{$pic.RelPermalink}}" class="img-fluid mb-3" alt="...">
             {{end}}
 
-            <p class="lead">{{.Description}}</p>
+            <p class="lead">{{.Summary|plainify}}</p>
             <a href="{{.RelPermalink}}" class="">Read More </a>
             <hr class="mb-5" />
 

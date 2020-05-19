@@ -7,8 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="display-4 text-primary">{{.Title|humanize}}</h1>
-                    <p class="lead">{{.Description}}</p>
+                    <h1 class="">{{.Title|humanize}}</h1>
                 </div>
             </div>
         </div>
@@ -17,7 +16,7 @@
 <div class="container py-4" style="min-height: 80vh;">
     <div class="row">
         <div class="col-md-10">
-            
+
             {{.Content}}
             <ul class="">
                 {{ range .Paginator.Pages }}
@@ -27,6 +26,7 @@
             <div class="d-flex justify-content-center pt-4">
                 {{ template "_internal/pagination.html" . }}
             </div>
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back</a></p>
         </div>
     </div>
 </div>
