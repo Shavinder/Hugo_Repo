@@ -5,10 +5,8 @@ draft: false
 list_pic: "work.jpg"
 list_in_popular_section: true
 weight: 1
+description: "A Foreign national needs either a work permit or an authorization to work without a permit to be allowed to work in Canada."
 ---
-
-A Foreign national needs either a work permit or an authorization to work without a permit to be allowed to work in Canada.
-
 ## Application from outside Canada
 
 A work permit application can be made from outside canada at any time.

@@ -6,7 +6,7 @@ author: "Shavinder Dandiwal"
 #list_pic:
 categories: ["Updates"]
 tags: ["provincial-median-wages", "high-wage positions", "low-wage-positions"]
-summary: "Government of Canada has announced new provincial/territorial median wage rates."
+description: "Government of Canada has announced new provincial/territorial median wage rates."
 ---
 Government of Canada has announced new provincial/territorial median wage rates, which decide whether an LMIA application falls under a High-wage position or Low-wage position.
 
@@ -17,8 +17,8 @@ If the wage rate being offered to a Temporary Foreign Worker is at or higher tha
 <table class="table">
   <tr>
     <th>Province/Territory</th>
-    <th><strong>Median hourly wages prior to May 11, 2020 2018 wage</strong></th>
-    <th><strong>Median hourly wages as of May 11, 2020 2019 wage</strong></th>
+    <th>Median hourly wages prior to May 11, 2020 2018 wage</th>
+    <th>Median hourly wages as of May 11, 2020 2019 wage</th>
   </tr>
   <tbody>
     <tr>

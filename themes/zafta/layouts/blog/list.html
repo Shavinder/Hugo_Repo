@@ -1,7 +1,6 @@
-
 {{ define "main" }}
 {{partial "nav_regular.html" .}}
-    <header class="py-5 mb-5 bg-light">
+    <header class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -17,7 +16,7 @@
         <div class="col-md-8">
             {{range (.Paginator 5).Pages.ByLastmod.Reverse}}
                 <!-- Blog Post -->
-                <h2><a href="{{.RelPermalink}}">{{.Title}}</a></h2>
+                <h2>{{.Title}}</h2>
 
                 <p class="text-muted ">
                     {{.Lastmod.Format "Jan 2, 2006"}}

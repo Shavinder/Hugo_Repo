@@ -4,10 +4,9 @@ date: 2020-04-14T16:10:35-07:00
 draft: false
 menu: "main"
 weight: 110
+description: "Upshore Immigration Services is an approved Canadian Immigration Consultant company. We provide services to those who wish to immigrate, work, study or visit Canada."
 ---
 
-## Welcome to Upshore Immigration Services
-Upshore Immigration Services is an approved Canadian Immigration Consultant company. We provide services to those who wish to immigrate, work, study or visit Canada. 
 ### Our work
 We welcome clients from all across the spectrum, including but not limited to:
 

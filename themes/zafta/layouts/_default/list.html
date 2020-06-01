@@ -3,11 +3,12 @@
     {{if not (.Parent).IsHome}}
         {{partial "breadcrumb.html" .}}
     {{end}}
-    <header class="py-5 mb-5 bg-light">
+    <header class="pt-5">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="">{{.Title|humanize}}</h1>
+                    <h1 class="">{{.Title}}</h1>
+                    <p class="lead">{{.Description}}</p>
                 </div>
             </div>
         </div>
@@ -16,13 +17,18 @@
 <div class="container py-4" style="min-height: 80vh;">
     <div class="row">
         <div class="col-md-10">
-
             {{.Content}}
-            <ul class="">
-                {{ range .Paginator.Pages }}
-                <li class=""><a href="{{.RelPermalink}}">{{ .Title | markdownify }}</a></li>
-                {{ end }}
-            </ul>
+            {{range (.Paginator 10).Pages}}
+                <ul>
+                    <li>
+                        <a href="{{.RelPermalink}}">{{.Title}}</a></p>
+                        
+                    </li>
+                </ul>
+                
+                
+            {{end}}
+            
             <div class="d-flex justify-content-center pt-4">
                 {{ template "_internal/pagination.html" . }}
             </div>
