@@ -26,7 +26,13 @@
             <div class="d-flex justify-content-center pt-4">
                 {{ template "_internal/pagination.html" . }}
             </div>
-            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back</a></p>
+
+            {{if (.Parent).IsHome}}
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to Home</a></p>
+            {{else}}
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to {{(.Parent).Name}}</a></p>
+            {{end}}
+
         </div>
     </div>
 </div>

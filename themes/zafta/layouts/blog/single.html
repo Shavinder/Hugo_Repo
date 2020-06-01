@@ -8,10 +8,10 @@
         <div class="col-md-8">
             <p>
                 {{ range .Params.categories }}
-                <a class="" href="{{ "/categories/" | relURL }}{{ . | urlize }}"><strong>{{ .|humanize }}</strong></a>
+                <a class="" href="{{ "/categories/" | relURL }}{{ . | urlize }}"><strong>{{ . }}</strong></a>
                 {{ end }}
             </p>
-            <h1 class="" style="">{{.Title|humanize}}</h1>
+            <h1 class="" style="">{{.Title}}</h1>
 
             <p>
                 {{if .Params.author}}
@@ -32,9 +32,13 @@
                 <a class="badge badge-info" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
                 {{ end }}
             </p>
-            
-            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back</a></p>
-            
+
+            {{if (.Parent).IsHome}}
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to Home</a></p>
+            {{else}}
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to {{(.Parent).Name}}</a></p>
+            {{end}}
+
         </div>
     </div>
 

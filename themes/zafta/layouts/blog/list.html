@@ -15,34 +15,34 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-            {{range (.Paginator 5).Pages.ByDate}}
-            <!-- Blog Post -->
-            <h2><a href="{{.RelPermalink}}">{{.Title}}</a></h2>
+            {{range (.Paginator 5).Pages.ByLastmod.Reverse}}
+                <!-- Blog Post -->
+                <h2><a href="{{.RelPermalink}}">{{.Title}}</a></h2>
 
-            <p class="text-muted ">
-                {{.Lastmod.Format "Jan 2, 2006"}}
-                {{if .Params.author}}
-                by {{.Params.author}}
+                <p class="text-muted ">
+                    {{.Lastmod.Format "Jan 2, 2006"}}
+                    {{if .Params.author}}
+                    by {{.Params.author}}
+                    {{end}}
+                    <i class="fas fa-folder-open"></i>
+                    {{range (.GetTerms "categories")}}
+                    <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle }}</a>,
+                    {{end}}
+
+                    <i class="fas fa-tag"></i>
+                    {{range (.GetTerms "tags")}}
+                    <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle }}</a>,
+                    {{end}}
+                </p>
+
+                {{if .Params.List_pic}}
+                {{$pic:= .Resources.GetMatch .Params.List_pic}}
+                <img src="{{$pic.RelPermalink}}" class="img-fluid mb-3" alt="...">
                 {{end}}
-                <i class="fas fa-folder-open"></i>
-                {{range (.GetTerms "categories")}}
-                <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle|humanize }}</a>
-                {{end}}
 
-                <i class="fas fa-tag"></i>
-                {{range (.GetTerms "tags")}}
-                <a class="pr-1" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-                {{end}}
-            </p>
-
-            {{if .Params.List_pic}}
-            {{$pic:= .Resources.GetMatch .Params.List_pic}}
-            <img src="{{$pic.RelPermalink}}" class="img-fluid mb-3" alt="...">
-            {{end}}
-
-            <p class="lead">{{.Summary|plainify}}</p>
-            <a href="{{.RelPermalink}}" class="">Read More </a>
-            <hr class="mb-5" />
+                <p class="lead">{{.Params.Summary}}</p>
+                <a href="{{.RelPermalink}}" class="">Read More </a>
+                <hr class="mb-5" />
 
             {{end}}
         </div>
@@ -66,7 +66,7 @@
                     <ul class="list-inline mb-0">
                         {{ range $key, $val:= .Site.Taxonomies.categories}}
                         <li class="list-inline-item">
-                            <a class="" href="/categories/{{$key}}/">{{$key|humanize}}</a>
+                            <a class="" href="/categories/{{$key}}/">{{$key}}</a>
                         </li>
                         {{end}}
                     </ul>
@@ -82,7 +82,7 @@
                     <ul class="list-inline mb-0">
                         {{ range $key, $val:= .Site.Taxonomies.tags}}
                         <li class="list-inline-item">
-                            <a class="" href="/tags/{{$key}}/">{{$key|humanize}}</a>
+                            <a class="" href="/tags/{{$key}}/">{{$key}}</a>
                         </li>
                         {{end}}
                     </ul>
@@ -113,6 +113,11 @@
             <div class="pt-4">
                 {{ template "_internal/pagination.html" . }}
             </div>
+            {{if (.Parent).IsHome}}
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to Home</a></p>
+            {{else}}
+            <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to {{(.Parent).Name}}</a></p>
+            {{end}}
         </div>
     </div>
 </div>

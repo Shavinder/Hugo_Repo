@@ -44,10 +44,11 @@
 
 .article p, .article ul, .article ol, .article blockquote {
 	max-width: 45em;
+	font-size: 14px;
 }
 
-	.article p:first-child {
-		font-size: 1.25em;
-		font-weight: 300;
-		max-width: 36em; /* 45 / 1.25 */
-	}
+.article p:first-child {
+	font-size: 1.25em;
+	font-weight: 300;
+	max-width: 36em; /* 45 / 1.25 */
+}

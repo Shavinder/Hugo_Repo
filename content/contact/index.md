@@ -6,5 +6,6 @@ menu: "main"
 weight: 140
 ---
 
-We offer some free *initial* consultation.
+Call us at [(780) 860-2050](tel:+1-780-860-2050) or email at upshoreimmigration@gmail.com  
+
 {{<contact>}}

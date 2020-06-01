@@ -117,7 +117,7 @@
                     <a class="text-muted" href="{{ .Permalink }}"> {{ .Lastmod.Format "January 2, 2006"  }}</a> |
 
                     {{ range .Params.categories }}
-                    <a class="text-muted" href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ .|humanize }}</a> |
+                    <a class="text-muted" href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a> |
                     {{ end }}
 
                     {{ range .Params.tags }}
