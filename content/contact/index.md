@@ -6,6 +6,11 @@ menu: "main"
 weight: 140
 ---
 
-Call us at [(780) 860-2050](tel:+1-780-860-2050) or email at upshoreimmigration@gmail.com  
+Phone: [(780) 860-2050](tel:+1-780-860-2050)
+
+Email: upshoreimmigration@gmail.com
+
+or use this form:
 
 {{<contact>}}
+

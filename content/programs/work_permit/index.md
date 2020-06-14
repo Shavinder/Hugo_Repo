@@ -41,7 +41,7 @@ There are two main programs under which work permits are issued.
 * Temporary Foreign Worker Program
 * International Mobility Program
 
-## Temporary Foreign Worker Program
+## Temporary Foreign Worker Program (LMIA based)
 
 Under the Temporary Foreign Worker Program a Canadian employer who wishes to hire a foreign worker has to obtain a [Labour Market Impact Assessment (LMIA)]({{<relref "programs/lmia">}}) from Employment and Social Development Canada(ESDC). 
 
@@ -50,7 +50,7 @@ The standard work permit process is a two-step process:
 * The prospective employer applies for an LMIA; and
 * the prospective employee applies for the work permit
 
-## International Mobility Program
+## International Mobility Program (LMIA exempt)
 
 Work permit under the International Mobility Program are exempted from the requirement to obtain an LMIA. These exemption categories are:
 

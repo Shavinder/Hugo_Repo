@@ -1,16 +1,30 @@
 
 {{ define "main" }}
 {{partial "nav_main.html" .}}
-{{partial "header_main.html" .}}
+
+<header class="masthead-main">
+    <div class="container text-light h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="">{{.Site.Params.headline}}</h1>
+                <p class="lead">{{.Site.Params.description}}</p>
+                <a class="btn btn-primary" style="" href="/contact/">
+                    Get in Touch <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
 <section class="" style="padding-top: 100px; padding-bottom: 60px;">
     <div class="container">
+        <h2 class="text-center">Who we are</h2>
+        <hr style="height:3px; background-color:tomato; width:50px; margin-bottom: 5em;" />
         <div class="row">
             <div class="col text-center">
-                <h2>Who are we?</h2>
                 <p class="lead">
                     Upshore Immigration Services Inc. is a licensed Canadian Immigration Consultancy company. We are authorized to deal in Canadian Immigration services by ICCRC, the regulatory body for Canadian Immigration consultants.
                 </p>
-                <a href="/about/" class="btn btn-primary">About us</a>
+                <a href="/about/" class="btn btn-outline-primary">About us</a>
             </div>
         </div>
     </div>
@@ -18,29 +32,34 @@
 
 <section style="min-height: 100vh;  padding-top: 100px; padding-bottom: 60px;" class="bg-light">
     <div class="container">
-        <h2 class="text-center mb-5">Popular programs</h2>
+        <h2 class="text-center">What we do</h2>
+        <hr style="height:3px; background-color:tomato; width:50px; margin-bottom: 5em;" />
         <div class="row d-flex justify-content-center">
             {{range (where .Site.RegularPages "Section" "programs")}}
-                {{if eq .Params.List_in_popular_section true}}
-                    <div class="col-md-4 col-lg-3 mb-4" >
-                        <div class="card h-100 text-center">
-                            {{if .Params.List_pic}}
-                                {{$pic:= .Resources.GetMatch .Params.List_pic}}
-                                <img src="{{$pic.RelPermalink}}" class="card-img-top " alt="...">
-                            {{end}}
-                            <div class="card-body bg-transparent">
-                                <h6 class="card-title"><a href="{{.RelPermalink}}">{{.Title}}</a></h6>
-                            </div>
-                        </div>
+            {{if eq .Params.List_in_popular_section true}}
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="card h-100 text-center">
+                    {{if .Params.List_pic}}
+                    {{$pic:= .Resources.GetMatch .Params.List_pic}}
+                    <img src="{{$pic.RelPermalink}}" class="card-img-top " alt="...">
+                    {{end}}
+                    <div class="card-body bg-transparent">
+                        <h6 class="card-title"><a href="{{.RelPermalink}}">{{.Title}}</a></h6>
                     </div>
-                {{end}}
-            
+                </div>
+            </div>
+            {{end}}
+
             {{ end }}
         </div>
         <div class="row">
             <div class="col text-center">
+
+                {{with .Site.GetPage "contact"}}
+                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">Find out if you qualify</a>
+                {{end}}
                 {{with .Site.GetPage "programs"}}
-                <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">Know Various Immigration Programs</a>
+                <a href="{{.Permalink}}" class="btn btn-outline-primary shadow-sm">Read More</a>
                 {{end}}
             </div>
         </div>
@@ -48,7 +67,8 @@
 </section>
 <section class="" style="min-height:60vh; padding-top: 100px; padding-bottom: 60px; ">
     <div class="container">
-        <h2 class="text-center mb-5">Why us</h2>
+        <h2 class="text-center">Why us</h2>
+        <hr style="height:3px; background-color:tomato; width:50px; margin-bottom: 5em;" />
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
@@ -87,7 +107,9 @@
         </div>
         <div class="row">
             <div class="col text-center">
-                <a href="/contact/" class="btn btn-primary">Contact us now</a>
+                {{with .Site.GetPage "contact"}}
+                <a href=".Permalink" class="btn btn-danger">Contact us now</a>
+                {{end}}
             </div>
         </div>
     </div>
@@ -103,6 +125,7 @@
                 {{ end }}
 
                 <h2 class="text-center">Recent posts</h2>
+                <hr style="height:3px; background-color:tomato; width:50px; margin-bottom: 5em;" />
 
                 {{ range first $recentposts (where .Pages "Type" "blog" ) }}
                 {{range .Pages}}
@@ -120,13 +143,13 @@
                     <a class="text-muted" href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>
                     {{ end }}
                 </p>
-                
+
                 {{ if .Params.description }}
                 <p class="lead mb-3">
                     {{ .Params.description }}
                 </p>
                 {{ end }}
-                
+
                 <p class="text-muted">Reading time: about {{ .ReadingTime }} minutes</p>
                 <p><a class="" href="{{ .RelPermalink }}">Read the article...</a></p>
                 {{end}}
@@ -137,12 +160,13 @@
 </section>
 <section style="min-height:400px; padding-top: 100px; padding-bottom: 60px; ">
     <div class="container">
+        <h2 class="text-center">Free Initial Consultation!</h2>
+        <hr style="height:3px; background-color:tomato; width:50px; margin-bottom: 5em;" />
         <div class="row">
-            <div class="col-md-6">
-                <h2>Free Initial Consultation!</h2>
+            <div class="col-md-6 text-center mx-auto">
                 <p>We provide a free <i>initial</i> consulation. Contact us today to discuss your situation and options. Your information is always kept confidential and private.</p>
-                <a class="btn btn-danger btn-lg" href="tel:+1 (780) 8060.2050">Call now!</a> &nbsp;
-                <a class="btn btn-outline-primary btn-lg" href="mailto:upshoreimmigration@gmail.com">Email Now!</a>
+                <a class="btn btn-danger" href="tel:+1 (780) 8060.2050">Call now!</a> &nbsp;
+                <a class="btn btn-outline-primary" href="mailto:upshoreimmigration@gmail.com">Email Now!</a>
 
             </div>
         </div>

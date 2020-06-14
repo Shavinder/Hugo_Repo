@@ -4,19 +4,20 @@
 {{partial "breadcrumb.html" .}}
 {{end}}
 <div class="container pb-5" style="min-height:80vh;">
+
     <div class="row">
-        <div class="col">
-            <h1 class="{{if (.Parent).IsHome}}mt-5{{end}}">{{.Title|humanize}}</h1>
-            <p class="lead">{{.Description}}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-lg-8">
-           
+
+        <div class="col-md-8">
+
+            <header>
+                <h1 class="{{if (.Parent).IsHome}}mt-5{{end}}" >{{.Title|humanize}}</h1>
+                <hr class="bg-danger" />
+                <p class="lead">{{.Description}}</p>
+            </header>
             <article class="article">
                 {{.Content}}
             </article>
-        
+
             {{if (.Parent).IsHome}}
             <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to Home</a></p>
             {{else}}
