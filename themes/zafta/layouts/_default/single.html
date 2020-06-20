@@ -7,14 +7,14 @@
 
     <div class="row">
 
-        <div class="col-md-8">
+        <div class="col-lg-10 mx-auto">
 
             <header>
                 <h1 class="{{if (.Parent).IsHome}}mt-5{{end}}" >{{.Title|humanize}}</h1>
                 <hr class="bg-danger" />
                 <p class="lead">{{.Description}}</p>
             </header>
-            <article class="article">
+            <article class="article mb-5">
                 {{.Content}}
             </article>
 

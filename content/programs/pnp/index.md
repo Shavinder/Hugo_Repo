@@ -5,6 +5,6 @@ draft: false
 featured: false
 list_in_popular_section: true
 list_pic: "pnp.jpg"
-weight: 5
+weight: 7
 ---
 
