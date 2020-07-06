@@ -17,19 +17,20 @@
 
 <div class="container py-4" style="min-height: 80vh;">
     <div class="row">
-        <div class="col-md-10">
+        
+        <div class="col-md-8">
             {{.Content}}
-            
-            <ul>
-                {{range (.Paginator 15).Pages}}
-                <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-                {{end}}
-            </ul>
-
-            <div class="d-flex justify-content-center pt-4">
-                {{ template "_internal/pagination.html" . }}
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="list-group mb-5">
+                        {{range .Pages}}
+                        <a class="list-group-item list-group-item-action" href="{{.RelPermalink}}">{{.Title}}</a>
+                        {{end}}
+                    </div>
+                </div>
             </div>
-
+            
+            
             {{if (.Parent).IsHome}}
             <p><a class="btn btn-secondary btn-sm" href="{{(.Parent).RelPermalink}}">Back to Home</a></p>
             {{else}}

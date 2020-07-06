@@ -5,20 +5,8 @@
 
 <!-- Components Vendor  -->
 <script src="/vendors/jquery.parallax.js"></script>
-<script src="/vendors/typedjs/typed.min.js"></script>
 
 <!-- Theme Settings and Calls -->
 <script src="/js/global.js"></script>
 
 <!-- END JAVASCRIPTS -->
-<script>
-    $(document).on('ready', function () {
-        // initialization of text animation (typing)
-        $(".js-display-typing").typed({
-            strings: {{.Site.Params.adjectives}},
-            typeSpeed: 60,
-            loop: true,
-            backDelay: 2500
-        });
-    });
-</script>
