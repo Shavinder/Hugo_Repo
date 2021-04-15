@@ -8,14 +8,42 @@
             <div class="col-12 text-center">
                 <h1 class="">{{.Site.Params.headline}}</h1>
                 <p class="lead">{{.Site.Params.description}}</p>
-                <a class="btn btn-primary" style="" href="/contact/">
+                <a class="btn btn-primary" href="/contact/">
                     Get in Touch <i class="fas fa-arrow-alt-circle-right ml-2"></i>
                 </a>
             </div>
         </div>
     </div>
 </header>
-<section class="" style="padding-top: 100px; padding-bottom: 60px;">
+<section style="padding-top: 100px; padding-bottom: 60px; background-color: rgb(255,255,102)">
+<div class="container">
+    <h2 class="text-center text-light bg-primary p-2"> New pathway to permanent residency for over 90,000 
+        essential temporary workers and international graduates </h2>
+    <p class="lead">Minister of Citizenship, Marco Mendicino has announced a new
+        Temporary public policy to facilitate the granting of permanent residence 
+        for foreign nationals in Canada, outside of Quebec, with a recent credential 
+        from a Canadian post-secondary institution and with recent Canadian work experience in essential occupations.
+    </p>
+    <p>
+        Effective May 6, 2021, Immigration, Refugees and Citizenship Canada (IRCC) will begin accepting applications 
+        under the following 3 streams:
+        <ul>
+            <li>20,000 applications for temporary workers in health care</li>
+            <li>30,000 applications for temporary workers in other selected essential occupations</li>
+            <li>40,000 applications for international students who graduated from a Canadian institution</li>            
+        </ul>
+        The streams will remain open until November 5, 2021, or until they have reached their limit. Up to 90,000 
+        new permanent residents will be admitted under these 3 streams. 
+    </p>
+    {{with .Site.GetPage "public_policy_may21"}}
+        <a href="{{.Permalink}}" class="btn btn-primary shadow-sm">Find out if you qualify</a>
+    {{end}}
+    
+    <a href="tel:+1-780-860-2050" class="btn btn-success shadow-sm">Call us now</a>
+    
+</div>
+</section>
+<section style="padding-top: 100px; padding-bottom: 60px;">
     <div class="container">
         <h2 class="text-center">Who we are</h2>
         <hr style="height:3px; background-color:tomato; width:50px; margin-bottom: 5em;" />
